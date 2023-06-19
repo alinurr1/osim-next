@@ -1,8 +1,11 @@
 import Image from "next/image";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 export default function Page() {
   return (
     <>
+      <Header />
       <section id="about-us" className="relative py-24 bg-blue-50">
         <div className="container px-4 mx-auto">
           <div className="flex flex-wrap items-center -mx-4">
@@ -499,6 +502,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }
