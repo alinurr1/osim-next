@@ -34,9 +34,14 @@ export default function Page() {
           </div>
           <ul className="flex flex-wrap -m-4 mb-16">
             {
-              recipesJson.map((recipe, id) => {
+              recipesJson.map((recipe) => {
                   return (
-                    <RecipeCard key={id} picture={recipe.picture} title={recipe.title} />
+                    <RecipeCard
+                      key={recipe.id}
+                      id={recipe.id}
+                      picture={recipe.picture}
+                      title={recipe.title}
+                    />
                   )
                 }
               )}
