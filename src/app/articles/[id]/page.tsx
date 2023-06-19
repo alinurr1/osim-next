@@ -11,7 +11,7 @@ interface articlePageProps {
   readonly text: string;
 }
 
-export default function Page(props: articlePageProps) {
+export default function Page() {
   const [article, setArticle] = useState<articlePageProps>({
     title: "",
     picture: "",
