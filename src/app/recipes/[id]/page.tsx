@@ -16,13 +16,13 @@ export default function Page() {
     title: "",
     picture: "",
     text: "",
-    ingredients: []
+    ingredients: [],
   });
   const pathname = usePathname();
 
   useEffect(() => {
     const id = pathname.split("/")[2];
-    const foundRecipe = recipesJson.find(recipe => recipe.id === id);
+    const foundRecipe = recipesJson.find((recipe) => recipe.id === id);
     if (foundRecipe?.title) {
       setRecipe(foundRecipe);
     }
@@ -39,8 +39,18 @@ export default function Page() {
                   className="flex items-center text-white font-semibold hover:text-blue-50"
                   href="/recipes"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-left" viewBox="0 0 16 16">
-                    <path fillRule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    className="bi bi-arrow-left"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+                    />
                   </svg>
                   <span className="ml-3">Назад к рецептам</span>
                 </Link>
@@ -63,14 +73,18 @@ export default function Page() {
               {recipe.title}
             </h2>
           </div>
-          <div className="max-w-2xl mx-auto">
-            {recipe.text}
-          </div>
+          <div className="max-w-2xl mx-auto">{recipe.text}</div>
           <div className="mt-5 max-w-2xl mx-auto">
-            <h3 className="mb-6 lg:text-3xl text-xl text-blue-800 font-bold font-heading">Ингредиенты</h3>
+            <h3 className="mb-6 lg:text-3xl text-xl text-blue-800 font-bold font-heading">
+              Ингредиенты
+            </h3>
             <ul className="list-disc">
               {recipe.ingredients.map((ingredient, id) => {
-                return <li className="ml-4" key={id}>{ingredient}</li>
+                return (
+                  <li className="ml-4" key={id}>
+                    {ingredient}
+                  </li>
+                );
               })}
             </ul>
           </div>

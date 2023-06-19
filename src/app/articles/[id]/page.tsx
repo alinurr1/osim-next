@@ -15,13 +15,13 @@ export default function Page(props: articlePageProps) {
   const [article, setArticle] = useState<articlePageProps>({
     title: "",
     picture: "",
-    text: ""
+    text: "",
   });
   const pathname = usePathname();
 
   useEffect(() => {
     const id = pathname.split("/")[2];
-    const foundArticle = articlesJson.find(article => article.id === id);
+    const foundArticle = articlesJson.find((article) => article.id === id);
     if (foundArticle?.title) {
       setArticle(foundArticle);
     }
@@ -38,8 +38,18 @@ export default function Page(props: articlePageProps) {
                   className="flex items-center text-white font-semibold hover:text-blue-50"
                   href="/articles"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-left" viewBox="0 0 16 16">
-                    <path fillRule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    className="bi bi-arrow-left"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+                    />
                   </svg>
                   <span className="ml-3">Назад к статьям</span>
                 </Link>
@@ -59,15 +69,13 @@ export default function Page(props: articlePageProps) {
         <div className="relative flex max-w-5xl mx-auto h-96 mb-8 overflow-hidden">
           <Image
             className="w-full h-full object-cover"
-            src={'/' + article.picture}
+            src={"/" + article.picture}
             alt={article.title}
             fill
           />
         </div>
         <div className="container px-2 mx-auto">
-          <div className="max-w-2xl mx-auto">
-            {article.text}
-          </div>
+          <div className="max-w-2xl mx-auto">{article.text}</div>
         </div>
       </section>
     </>

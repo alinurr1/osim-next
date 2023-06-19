@@ -133,8 +133,8 @@ export default function Page() {
             </h2>
             <p className="mb-2 text-lg text-gray-500 mx-auto max-w-4xl">
               Современное предприятие мукомольного производства, оборудованное
-              современным мельничным комплексом турецкого производства ZORLU milling.
-              элеватор в с.Бель-Агач, Бородулихинского района, ВКО.
+              современным мельничным комплексом турецкого производства ZORLU
+              milling. элеватор в с.Бель-Агач, Бородулихинского района, ВКО.
             </p>
           </div>
           <div className="flex flex-wrap -m-px">
@@ -348,7 +348,10 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="products" className="relative overflow-x-hidden pb-24 lg:py-24 mx-auto">
+      <section
+        id="products"
+        className="relative overflow-x-hidden pb-24 lg:py-24 mx-auto"
+      >
         <img
           className="lg:absolute lg:top-0 lg:left-0 h-full w-full lg:w-5/12 mb-12 lg:mb-0 object-cover lg:clip-path-right-top"
           src="images/muka.jpg"
@@ -454,7 +457,10 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="contacts" className="relative py-24 bg-blue-50 overflow-hidden">
+      <section
+        id="contacts"
+        className="relative py-24 bg-blue-50 overflow-hidden"
+      >
         <div className="absolute top-0 bottom-0 -left-1/4 -right-1/4 flex items-center justify-center"></div>
         <div className="relative container px-4 mx-auto">
           <div className="max-w-2xl mx-auto mb-16 text-center">

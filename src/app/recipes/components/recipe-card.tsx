@@ -14,12 +14,12 @@ export const RecipeCard = ({ id, picture, title }: recipeCardProps) => {
       <Link href={"/recipes/" + id}>
         <div className="bg-white">
           <div className="relative h-52">
-          <span className="absolute top left-0 pr-10 pl-8 py-4 text-xs uppercase text-gray-500 bg-white clip-path-right-small">
-            Development
-          </span>
+            <span className="absolute top left-0 pr-10 pl-8 py-4 text-xs uppercase text-gray-500 bg-white clip-path-right-small">
+              Development
+            </span>
             <Image
               className="w-full h-full object-cover"
-              src={'/' + picture}
+              src={"/" + picture}
               alt={title}
               fill
             />
@@ -32,5 +32,5 @@ export const RecipeCard = ({ id, picture, title }: recipeCardProps) => {
         </div>
       </Link>
     </li>
-  )
-}
+  );
+};

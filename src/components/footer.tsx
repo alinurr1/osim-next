@@ -73,5 +73,5 @@ export const Footer = () => {
         All rights reserved © Osim 2023
       </p>
     </section>
-  )
-}
+  );
+};

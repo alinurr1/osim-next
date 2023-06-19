@@ -12,19 +12,26 @@ interface articleCardProps {
   isBigCard: boolean;
 }
 
-export const ArticleCard = ({ id, picture, date, title, header, isBigCard = false }: articleCardProps) => {
+export const ArticleCard = ({
+  id,
+  picture,
+  date,
+  title,
+  header,
+  isBigCard = false,
+}: articleCardProps) => {
   return (
     <li
-      className={cn('w-full px-4 mb-20',{
-        'lg:w-2/3': isBigCard,
-        'lg:w-1/3': !isBigCard
+      className={cn("w-full px-4 mb-20", {
+        "lg:w-2/3": isBigCard,
+        "lg:w-1/3": !isBigCard,
       })}
     >
       <Link href={"/articles/" + id}>
         <div className="relative flex h-96 mb-8 overflow-hidden">
           <Image
             className="w-full h-full object-cover"
-            src={'/' + picture}
+            src={"/" + picture}
             alt={header}
             fill
           />
@@ -35,10 +42,8 @@ export const ArticleCard = ({ id, picture, date, title, header, isBigCard = fals
         <h2 className="mb-4 text-2xl font-semibold font-heading text-blue-800">
           {title}
         </h2>
-        <p className="mb-3 text-base text-gray-500 leading-loose">
-          {header}
-        </p>
+        <p className="mb-3 text-base text-gray-500 leading-loose">{header}</p>
       </Link>
     </li>
-  )
-}
+  );
+};

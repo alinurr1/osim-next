@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -8,7 +8,7 @@ export const Header = () => {
   const pathname = usePathname();
   const [isNavHidden, setIsNavHidden] = useState(true);
 
-  const isMainPage = pathname === '/';
+  const isMainPage = pathname === "/";
 
   return (
     <section>
@@ -16,7 +16,10 @@ export const Header = () => {
         <div className="flex justify-between items-center">
           <a className="text-xl text-white font-semibold" href="#" />
           <div className="lg:hidden">
-            <button className="navbar-burger flex items-center p-3 rounded" onClick={() => setIsNavHidden(false)}>
+            <button
+              className="navbar-burger flex items-center p-3 rounded"
+              onClick={() => setIsNavHidden(false)}
+            >
               <svg
                 className="text-white block h-4 w-4"
                 viewBox="0 0 20 20"
@@ -46,7 +49,10 @@ export const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href="/#production" className="text-white font-semibold hover:text-blue-50">
+              <Link
+                href="/#production"
+                className="text-white font-semibold hover:text-blue-50"
+              >
                 Продукция
               </Link>
             </li>
@@ -69,27 +75,31 @@ export const Header = () => {
           </ul>
         </div>
       </nav>
-      {
-        isMainPage ?
-          <div
-            className="relative text-center bg-cover overflow-hidden py-72"
-            style={{
-              backgroundImage: 'url("images/about-jpg-1684070765310.webp")',
-            }}
-          >
-            <div className="absolute top-0 bottom-0 -left-1/4 -right-1/4 flex items-center justify-center"></div>
-            <div className="relative max-w-4xl mx-auto px-4"></div>
-          </div>
-          :
-          <></>
-      }
+      {isMainPage ? (
+        <div
+          className="relative text-center bg-cover overflow-hidden py-72"
+          style={{
+            backgroundImage: 'url("images/about-jpg-1684070765310.webp")',
+          }}
+        >
+          <div className="absolute top-0 bottom-0 -left-1/4 -right-1/4 flex items-center justify-center"></div>
+          <div className="relative max-w-4xl mx-auto px-4"></div>
+        </div>
+      ) : (
+        <></>
+      )}
       <div
-        className={cn("navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50", {
-          "hidden": isNavHidden
-          })
-        }
+        className={cn(
+          "navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50",
+          {
+            hidden: isNavHidden,
+          }
+        )}
       >
-        <div className="navbar-backdrop fixed inset-0 bg-blue-800 opacity-90" onClick={() => setIsNavHidden(true)}/>
+        <div
+          className="navbar-backdrop fixed inset-0 bg-blue-800 opacity-90"
+          onClick={() => setIsNavHidden(true)}
+        />
         <nav className="relative flex flex-col py-8 w-full h-full bg-white border-r overflow-y-auto">
           <div className="flex items-center mb-16 pr-6">
             <Link
@@ -152,5 +162,5 @@ export const Header = () => {
         </nav>
       </div>
     </section>
-  )
-}
+  );
+};
