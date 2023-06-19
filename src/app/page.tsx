@@ -1,113 +1,504 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-export default function Home() {
+export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <section id="about-us" className="relative py-24 bg-blue-50">
+        <div className="container px-4 mx-auto">
+          <div className="flex flex-wrap items-center -mx-4">
+            <div className="w-full lg:w-1/2 px-4 pb-12 lg:pb-0">
+              <div>
+                <h2 className="mb-10 font-bold font-heading text-blue-800 text-3xl">
+                  Фабрика макаронных изделий
+                </h2>
+                <div className="flex items-start mb-10">
+                  <div className="pl-3 pr-1 mr-10">
+                    <svg
+                      width={20}
+                      height={49}
+                      viewBox="0 0 20 49"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.19675 11.456H0.19675V12.456H1.19675V11.456ZM1.19675 1.28V0.279999H0.19675V1.28H1.19675ZM18.9248 1.28H19.9248V0.279999H18.9248V1.28ZM18.9248 48V49H19.9248V48H18.9248ZM7.53275 48H6.53275V49H7.53275V48ZM7.53275 11.456H8.53275V10.456H7.53275V11.456ZM2.19675 11.456V1.28H0.19675V11.456H2.19675ZM1.19675 2.28H18.9248V0.279999H1.19675V2.28ZM17.9248 1.28V48H19.9248V1.28H17.9248ZM18.9248 47H7.53275V49H18.9248V47ZM8.53275 48V11.456H6.53275V48H8.53275ZM7.53275 10.456H1.19675V12.456H7.53275V10.456Z"
+                        fill="#3C74F9"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-base text-gray-500">
+                      Современное, высокотехнологичное предприятие, основной
+                      продукцией которого является макаронные изделия «Өсім»-
+                      натуральный продукт, приготовленный по классической
+                      рецептуре на итальянском оборудовании.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start mb-10">
+                  <div className="pl-1 mr-10">
+                    <svg
+                      width={35}
+                      height={50}
+                      viewBox="0 0 35 50"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.71475 40.1973L1.09287 39.4142L0.71475 39.7145V40.1973H1.71475ZM3.69875 38.5973L3.06167 37.8265L4.25345 39.4294L3.69875 38.5973ZM13.5548 30.0853L12.8808 29.3465L12.8743 29.3525L13.5548 30.0853ZM20.9788 11.9093L20.2078 12.5462V12.5462L20.9788 11.9093ZM13.4908 12.2933L12.694 11.6889L12.6908 11.6933L13.4908 12.2933ZM12.1468 17.4133V18.4133H13.1468V17.4133H12.1468ZM1.58675 17.4133L0.587027 17.3898L0.562944 18.4133H1.58675V17.4133ZM3.89075 8.32533L3.03851 7.80202L3.03193 7.81305L3.89075 8.32533ZM9.71475 2.94933L9.28665 2.04557L9.28045 2.04856L9.71475 2.94933ZM29.2348 5.12533L28.5218 5.82659L28.5276 5.83243L29.2348 5.12533ZM28.4668 28.0373L29.2468 28.6631L29.2501 28.6589L28.4668 28.0373ZM16.5628 39.4293L15.9527 38.637L13.6247 40.4293H16.5628V39.4293ZM33.8428 39.4293H34.8428V38.4293H33.8428V39.4293ZM33.8428 48.3253V49.3253H34.8428V48.3253H33.8428ZM1.71475 48.3253H0.71475V49.3253H1.71475V48.3253ZM2.33663 40.9804C3.0622 40.4043 3.59271 39.9809 3.9265 39.7117C4.09177 39.5785 4.21479 39.4782 4.28994 39.415C4.3136 39.3952 4.37122 39.3471 4.41686 39.3014C4.42575 39.2925 4.44073 39.2773 4.45818 39.2577C4.46976 39.2448 4.50983 39.1999 4.55155 39.1359C4.57052 39.1068 4.6163 39.0342 4.65362 38.932C4.67609 38.8704 4.78649 38.5661 4.63897 38.2079C4.44459 37.7359 4.01504 37.6132 3.8116 37.5933C3.63057 37.5755 3.49109 37.6127 3.45038 37.6238C3.34855 37.6516 3.27416 37.69 3.25993 37.6972C3.23193 37.7114 3.21002 37.7241 3.19824 37.7311C3.17401 37.7455 3.15427 37.7585 3.14405 37.7653L4.25345 39.4294C4.25123 39.4309 4.23795 39.4397 4.21864 39.4512C4.20931 39.4567 4.18948 39.4683 4.16316 39.4816C4.15062 39.488 4.07754 39.5258 3.97662 39.5533C3.93637 39.5643 3.79725 39.6015 3.61648 39.5837C3.41331 39.5638 2.98393 39.4413 2.78963 38.9694C2.64218 38.6114 2.75256 38.3073 2.7749 38.2461C2.81211 38.1442 2.85767 38.072 2.87633 38.0434C2.91742 37.9804 2.95648 37.9367 2.96666 37.9253C2.98272 37.9073 2.99591 37.894 3.00264 37.8872C3.03094 37.8589 3.04657 37.8475 3.00356 37.8836C2.94537 37.9325 2.8364 38.0215 2.671 38.1549C2.34346 38.4191 1.81797 38.8384 1.09287 39.4142L2.33663 40.9804ZM4.33583 39.3681C8.52368 35.9067 11.8256 33.0556 14.2352 30.8181L12.8743 29.3525C10.5052 31.5524 7.23649 34.3759 3.06167 37.8265L4.33583 39.3681ZM14.2287 30.8241C16.7112 28.5594 18.8118 26.1766 20.5241 23.674L18.8734 22.5446C17.2577 24.9061 15.2623 27.1739 12.8808 29.3466L14.2287 30.8241ZM20.5241 23.674C22.2702 21.1219 23.1948 18.5604 23.1948 16.0053H21.1948C21.1948 18.0582 20.4553 20.2327 18.8734 22.5446L20.5241 23.674ZM23.1948 16.0053C23.1948 14.1101 22.7555 12.49 21.7497 11.2724L20.2078 12.5462C20.8233 13.2914 21.1948 14.4019 21.1948 16.0053H23.1948ZM21.7497 11.2724C20.6991 10.0007 19.1619 9.43733 17.3308 9.43733V11.4373C18.7423 11.4373 19.637 11.8553 20.2078 12.5462L21.7497 11.2724ZM17.3308 9.43733C15.4127 9.43733 13.8313 10.1899 12.6941 11.6889L14.2874 12.8977C15.0275 11.9221 16.0062 11.4373 17.3308 11.4373V9.43733ZM12.6908 11.6933C11.6155 13.127 11.1468 15.0786 11.1468 17.4133H13.1468C13.1468 15.3108 13.574 13.849 14.2908 12.8933L12.6908 11.6933ZM12.1468 16.4133H1.58675V18.4133H12.1468V16.4133ZM2.58647 17.4369C2.66887 13.9351 3.40868 11.0856 4.74957 8.83761L3.03193 7.81305C1.47149 10.4291 0.6753 13.6382 0.587027 17.3898L2.58647 17.4369ZM4.74292 8.84859C6.14395 6.56692 7.94548 4.91254 10.149 3.8501L9.28045 2.04856C6.70536 3.29012 4.62422 5.21974 3.03858 7.80207L4.74292 8.84859ZM10.1428 3.85307C12.4288 2.77022 14.9687 2.22133 17.7788 2.22133V0.221329C14.7008 0.221329 11.8647 0.824435 9.28666 2.04559L10.1428 3.85307ZM17.7788 2.22133C22.6949 2.22133 26.2134 3.47971 28.5218 5.82657L29.9477 4.42409C27.1361 1.56562 23.0173 0.221329 17.7788 0.221329V2.22133ZM28.5276 5.83243C30.9167 8.22152 32.1388 11.346 32.1388 15.3013H34.1388C34.1388 10.894 32.7581 7.23448 29.9419 4.41822L28.5276 5.83243ZM32.1388 15.3013C32.1388 19.6186 30.6723 23.6489 27.6834 27.4158L29.2501 28.6589C32.4905 24.5751 34.1388 20.1147 34.1388 15.3013H32.1388ZM27.6867 27.4116C24.6315 31.2202 20.7243 34.9632 15.9527 38.637L17.1728 40.2217C22.0438 36.4714 26.0727 32.6198 29.2468 28.6631L27.6867 27.4116ZM16.5628 40.4293H33.8428V38.4293H16.5628V40.4293ZM32.8428 39.4293V48.3253H34.8428V39.4293H32.8428ZM33.8428 47.3253H1.71475V49.3253H33.8428V47.3253ZM2.71475 48.3253V40.1973H0.71475V48.3253H2.71475Z"
+                        fill="#3C74F9"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-base text-gray-500">
+                      Мука, используемая в производстве макаронных изделий,
+                      вырабатывается из продовольственной пшеницы собранной с
+                      наших крестьянских хозяйств, что дает гарантию качества
+                      продукции и конкурентоспособную цену.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start mb-10">
+                  <div className="pl-1 mr-10">
+                    <svg
+                      width={36}
+                      height={51}
+                      viewBox="0 0 36 51"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.389 15.3947L1.3897 15.3573L1.35092 16.3947H2.389V15.3947ZM6.869 4.83466L7.52911 5.58583L7.52912 5.58583L6.869 4.83466ZM26.517 2.78666L26.0766 3.68448L26.0832 3.68766L26.517 2.78666ZM31.701 7.33066L30.8435 7.84516L30.8477 7.85209L30.8519 7.85896L31.701 7.33066ZM31.381 20.7067L32.1601 21.3337L32.1673 21.3245L31.381 20.7067ZM26.453 24.2907L26.1303 23.3442L25.453 23.5751V24.2907H26.453ZM26.453 24.5467H25.453V25.2674L26.1368 25.4953L26.453 24.5467ZM32.213 28.5787L33.013 27.9787L32.213 28.5787ZM32.469 42.8507L31.6131 42.3335L31.6099 42.3389L32.469 42.8507ZM27.157 47.5867L26.7163 46.689L26.7098 46.6922L27.157 47.5867ZM6.613 45.5387L5.97387 46.3078L5.97918 46.3121L6.613 45.5387ZM1.813 34.1467V33.1467H0.778822L0.813565 34.1803L1.813 34.1467ZM12.437 34.1467L13.4367 34.1239L13.4145 33.1467H12.437V34.1467ZM14.037 38.6267L13.3022 39.3049L13.3088 39.3121L13.3156 39.3192L14.037 38.6267ZM22.357 38.8187L21.6344 38.1274L21.6336 38.1282L22.357 38.8187ZM21.781 30.5627L21.1896 31.3691L21.2047 31.3801L21.2202 31.3906L21.781 30.5627ZM13.525 29.1547H12.525V30.1547H13.525V29.1547ZM13.525 20.2587V19.2587H12.525V20.2587H13.525ZM20.821 19.1707L21.3019 20.0475L21.3113 20.0422L20.821 19.1707ZM21.589 11.5547L22.2961 10.8476V10.8476L21.589 11.5547ZM14.421 11.7467L13.65 11.1098L13.6416 11.12L13.6335 11.1304L14.421 11.7467ZM13.077 15.3947V16.3947H13.9927L14.0731 15.4826L13.077 15.3947ZM3.3883 15.432C3.55112 11.0766 4.96329 7.84064 7.52911 5.58583L6.20889 4.0835C3.14271 6.77802 1.56821 10.582 1.3897 15.3573L3.3883 15.432ZM7.52912 5.58583C10.1153 3.31309 13.6753 2.12266 18.325 2.12266V0.122662C13.332 0.122662 9.25467 1.4069 6.20889 4.0835L7.52912 5.58583ZM18.325 2.12266C21.4124 2.12266 23.9843 2.65803 26.0766 3.68445L26.9574 1.88887C24.5271 0.696626 21.6376 0.122662 18.325 0.122662V2.12266ZM26.0832 3.68766C28.237 4.72467 29.8057 6.11549 30.8435 7.84516L32.5585 6.81617C31.2923 4.70583 29.405 3.06732 26.9508 1.88566L26.0832 3.68766ZM30.8519 7.85896C31.9423 9.61128 32.493 11.581 32.493 13.7947H34.493C34.493 11.2296 33.8491 8.89004 32.5501 6.80236L30.8519 7.85896ZM32.493 13.7947C32.493 16.4407 31.8342 18.5113 30.5947 20.0888L32.1673 21.3245C33.7438 19.318 34.493 16.7806 34.493 13.7947H32.493ZM30.602 20.0797C29.2966 21.7015 27.8055 22.7731 26.1303 23.3442L26.7757 25.2372C28.8552 24.5282 30.6494 23.2105 32.16 21.3337L30.602 20.0797ZM25.453 24.2907V24.5467H27.453V24.2907H25.453ZM26.1368 25.4953C28.3945 26.2479 30.1384 27.4791 31.413 29.1787L33.013 27.9787C31.4717 25.9235 29.3755 24.4667 26.7692 23.598L26.1368 25.4953ZM31.413 29.1787C32.6613 30.843 33.325 33.0272 33.325 35.8107H35.325C35.325 32.7061 34.5807 30.069 33.013 27.9787L31.413 29.1787ZM33.325 35.8107C33.325 38.2935 32.7464 40.4577 31.6131 42.3335L33.3249 43.3678C34.6663 41.1476 35.325 38.6185 35.325 35.8107H33.325ZM31.6099 42.3389C30.526 44.1583 28.9106 45.6118 26.7163 46.689L27.5977 48.4843C30.0967 47.2575 32.0227 45.5537 33.3281 43.3625L31.6099 42.3389ZM26.7098 46.6922C24.5742 47.76 21.9826 48.3147 18.901 48.3147V50.3147C22.2194 50.3147 25.1318 49.7173 27.6042 48.4811L26.7098 46.6922ZM18.901 48.3147C13.9442 48.3147 10.0938 47.0981 7.24682 44.7652L5.97918 46.3121C9.2762 49.0139 13.6178 50.3147 18.901 50.3147V48.3147ZM7.25212 44.7696C4.50211 42.4843 2.97647 38.9931 2.81244 34.1131L0.813565 34.1803C0.990863 39.4549 2.66522 43.5583 5.97388 46.3078L7.25212 44.7696ZM1.813 35.1467H12.437V33.1467H1.813V35.1467ZM11.4373 34.1694C11.4841 36.2286 12.0755 37.976 13.3022 39.3049L14.7718 37.9484C13.9505 37.0587 13.4753 35.8194 13.4367 34.1239L11.4373 34.1694ZM13.3156 39.3192C14.584 40.6405 16.3749 41.2267 18.517 41.2267V39.2267C16.7338 39.2267 15.538 38.7462 14.7584 37.9341L13.3156 39.3192ZM18.517 41.2267C20.3729 41.2267 21.946 40.6975 23.0804 39.5091L21.6336 38.1282C20.976 38.8172 19.9891 39.2267 18.517 39.2267V41.2267ZM23.0796 39.5099C24.2251 38.3123 24.765 36.7699 24.765 34.9787H22.765C22.765 36.3447 22.3662 37.3623 21.6344 38.1274L23.0796 39.5099ZM24.765 34.9787C24.765 32.7037 24.0158 30.8687 22.3418 29.7347L21.2202 31.3906C22.1915 32.0486 22.765 33.1576 22.765 34.9787H24.765ZM22.3724 29.7563C20.8304 28.6255 18.4949 28.1547 15.573 28.1547V30.1547C18.3684 30.1547 20.1716 30.6225 21.1896 31.3691L22.3724 29.7563ZM15.573 28.1547H13.525V30.1547H15.573V28.1547ZM14.525 29.1547V20.2587H12.525V29.1547H14.525ZM13.525 21.2587H15.573V19.2587H13.525V21.2587ZM15.573 21.2587C17.8475 21.2587 19.7809 20.8815 21.3018 20.0475L20.3402 18.2938C19.2158 18.9105 17.6505 19.2587 15.573 19.2587V21.2587ZM21.3113 20.0422C23.0671 19.0546 23.869 17.3239 23.869 15.1387H21.869C21.869 16.7935 21.3055 17.7508 20.3307 18.2991L21.3113 20.0422ZM23.869 15.1387C23.869 13.4134 23.3846 11.9361 22.2961 10.8476L20.8819 12.2618C21.5001 12.8799 21.869 13.7919 21.869 15.1387H23.869ZM22.2961 10.8476C21.2128 9.76425 19.7608 9.27466 18.069 9.27466V11.2747C19.3639 11.2747 20.2585 11.6384 20.8819 12.2618L22.2961 10.8476ZM18.069 9.27466C16.2378 9.27466 14.7006 9.83802 13.65 11.1098L15.192 12.3835C15.7627 11.6926 16.6575 11.2747 18.069 11.2747V9.27466ZM13.6335 11.1304C12.7274 12.2882 12.2229 13.6966 12.0809 15.3068L14.0731 15.4826C14.1871 14.1913 14.5786 13.1678 15.2085 12.363L13.6335 11.1304ZM13.077 14.3947H2.389V16.3947H13.077V14.3947Z"
+                        fill="#3C74F9"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-base text-gray-500">
+                      Макаронные изделия «Өсім» производятся на оборудовании
+                      мирового лидера в разработке и производстве
+                      технологических линии по производству макарон Итальянской
+                      фирмы TECALIT. Всостав макаронных изделий не входят
+                      пищевые добавки и красители.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="mr-10">
+                    <svg
+                      width={41}
+                      height={49}
+                      viewBox="0 0 41 49"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.47975 39.576H0.47975V40.576H1.47975V39.576ZM1.47975 30.744L0.660178 30.171L0.47975 30.4291V30.744H1.47975ZM21.7038 1.81599V0.815994H21.1827L20.8842 1.24302L21.7038 1.81599ZM33.9278 1.81599H34.9278V0.815994H33.9278V1.81599ZM33.9278 30.104H32.9278V31.104H33.9278V30.104ZM39.1758 30.104H40.1758V29.104H39.1758V30.104ZM39.1758 39.576V40.576H40.1758V39.576H39.1758ZM33.9278 39.576V38.576H32.9278V39.576H33.9278ZM33.9278 47.896V48.896H34.9278V47.896H33.9278ZM22.9838 47.896H21.9838V48.896H22.9838V47.896ZM22.9838 39.576H23.9838V38.576H22.9838V39.576ZM23.7518 13.848H24.7518V10.5234L22.9177 13.2963L23.7518 13.848ZM12.9998 30.104L12.1657 29.5523L11.1394 31.104H12.9998V30.104ZM23.7518 30.104V31.104H24.7518V30.104H23.7518ZM2.47975 39.576V30.744H0.47975V39.576H2.47975ZM2.29932 31.317L22.5233 2.38897L20.8842 1.24302L0.660178 30.171L2.29932 31.317ZM21.7038 2.81599H33.9278V0.815994H21.7038V2.81599ZM32.9278 1.81599V30.104H34.9278V1.81599H32.9278ZM33.9278 31.104H39.1758V29.104H33.9278V31.104ZM38.1758 30.104V39.576H40.1758V30.104H38.1758ZM39.1758 38.576H33.9278V40.576H39.1758V38.576ZM32.9278 39.576V47.896H34.9278V39.576H32.9278ZM33.9278 46.896H22.9838V48.896H33.9278V46.896ZM23.9838 47.896V39.576H21.9838V47.896H23.9838ZM22.9838 38.576H1.47975V40.576H22.9838V38.576ZM22.9177 13.2963L12.1657 29.5523L13.8338 30.6557L24.5858 14.3997L22.9177 13.2963ZM12.9998 31.104H23.7518V29.104H12.9998V31.104ZM24.7518 30.104V13.848H22.7518V30.104H24.7518Z"
+                        fill="#3C74F9"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-base text-gray-500">
+                      Благодаря выше перечисленным преимуществам впроизводстве,
+                      макаронные изделия «Өсім» обладают отличными вкусовыми
+                      качествами и имеют привлекательный товарный вид
+                      (используется мука богатая клейковиной, которая в
+                      значительной степени определяет пластические и упругие
+                      свойства теста для макаронных изделий).
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-full lg:w-1/2 px-4">
+              <img
+                className="w-full lg:w-auto object-cover h-64 lg:h-128"
+                src="images/about.jpg"
+                alt=""
+              />
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+      </section>
+      <section id="factory" className="pt-2 pb-24 bg-blue-50">
+        <div className="container mx-auto px-4">
+          <div className="mb-12">
+            <h2 className="text-4xl text-blue-800 mb-2 leading-tight font-bold font-heading mx-auto max-w-4xl text-center">
+              Бель-Агачский мукомольный комбинат
+            </h2>
+            <p className="mb-2 text-lg text-gray-500 mx-auto max-w-4xl">
+              Современное предприятие мукомольного производства, оборудованное
+              современным мельничным комплексом турецкого производства ZORLU milling.
+              элеватор в с.Бель-Агач, Бородулихинского района, ВКО.
+            </p>
+          </div>
+          <div className="flex flex-wrap -m-px">
+            <div className="w-full lg:w-1/2 p-px">
+              <img
+                className="w-full h-72 object-cover"
+                src="images/photo-1612966874574-e0a92ad2bc43-1683675236541.webp"
+                alt=""
+              />
+            </div>
+            <div className="w-full lg:w-1/2 p-px">
+              <img
+                className="w-full h-72 object-cover"
+                src="images/riflenka.jpg"
+                alt=""
+              />
+            </div>
+            <div className="w-full lg:w-1/3 p-px">
+              <img
+                className="w-full h-72 object-cover"
+                src="images/muka.jpg"
+                alt=""
+              />
+            </div>
+            <div className="w-full lg:w-1/3 p-px">
+              <img
+                className="w-full h-72 object-cover"
+                src="images/hero-jpg-1684069760610.webp"
+                alt=""
+              />
+            </div>
+            <div className="w-full lg:w-1/3 p-px">
+              <img
+                className="w-full h-72 object-cover"
+                src="images/vermsishel.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="features" className="bg-blue-50">
+        <div className="container px-4 mx-auto">
+          <div className="p-16">
+            <div className="flex flex-wrap -mx-10 -mb-10 content-center">
+              <div className="w-full md:w-1/2 lg:w-1/4 px-10 mb-10 text-center">
+                <span>
+                  <svg
+                    className="mx-auto mb-6 text-blue-800 h-8 w-8"
+                    viewBox="0 0 32 32"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M16 -0.0533447L0 15.7333L16 31.52L32 15.7333L16 -0.0533447ZM3.7708 15.7333L16 3.66718L21.172 8.77022L19.2864 10.6307L16 7.38888L7.5428 15.7333L10.828 18.9759L8.9424 20.8364L3.7708 15.7333ZM20.6876 15.7333L16 20.3596L11.3136 15.7333L16 11.1094L20.6876 15.7333ZM10.828 22.6968L12.7136 20.8364L16 24.0778L24.4584 15.7333L21.172 12.4907L23.0576 10.6303L28.2292 15.7333L16 27.7995L10.828 22.6968Z" />
+                  </svg>
+                </span>
+                <h3 className="mb-3 text-3xl font-bold font-heading text-blue-800">
+                  Логистика
+                </h3>
+                <p className="text-sm text-gray-500">
+                  Собственные подъездные железно-дорожные пути
+                </p>
+              </div>
+              <div className="w-full md:w-1/2 lg:w-1/4 px-10 mb-10 text-center">
+                <span>
+                  <svg
+                    className="mx-auto mb-6 text-blue-800 h-8 w-8"
+                    viewBox="0 0 32 32"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M17.3332 0V2.64111C24.0732 3.30415 29.3332 8.93644 29.3332 15.7867C29.3332 22.6357 24.0732 28.2676 17.3332 28.9306V31.5733C25.5456 30.9016 32 24.0952 32 15.7867C32 7.47696 25.5456 0.673301 17.3332 0Z" />
+                    <path d="M14.6668 28.9306C7.9296 28.2676 2.6668 22.6357 2.6668 15.7867C2.6668 8.93683 7.9296 3.30415 14.6668 2.64111V0C6.456 0.673301 0 7.47696 0 15.7867C0 24.0952 6.456 30.9016 14.6668 31.5733V28.9306Z" />
+                    <path d="M8.12 14.4712C8.7552 10.7389 12.0364 7.89333 16 7.89333C19.9636 7.89333 23.2448 10.7389 23.88 14.4712H26.574C25.918 9.28098 21.4404 5.26208 16 5.26208C10.5624 5.26208 6.0832 9.28098 5.4256 14.4712H8.12Z" />
+                    <path d="M23.88 17.1021C23.2448 20.8329 19.9636 23.68 16 23.68C12.0364 23.68 8.75519 20.8329 8.11999 17.1021H5.42599C6.08319 22.2923 10.5624 26.3112 16 26.3112C21.4404 26.3112 25.918 22.2923 26.5744 17.1021H23.88Z" />
+                    <path d="M16 10.5246C13.0548 10.5246 10.6668 12.8807 10.6668 15.7867C10.6668 18.6926 13.0548 21.0488 16 21.0488C18.9464 21.0488 21.3332 18.6926 21.3332 15.7867C21.3332 12.8807 18.9464 10.5246 16 10.5246ZM16 18.4179C14.5272 18.4179 13.3332 17.2398 13.3332 15.7867C13.3332 14.3335 14.5272 13.1554 16 13.1554C17.474 13.1554 18.6668 14.3335 18.6668 15.7867C18.6668 17.2398 17.474 18.4179 16 18.4179Z" />
+                  </svg>
+                </span>
+                <h3 className="mb-4 text-3xl font-bold font-heading text-blue-800">
+                  Качество
+                </h3>
+                <p className="text-sm text-gray-500">
+                  Качество муки соответствует самым высоким требованиям
+                  качества.
+                </p>
+              </div>
+              <div className="w-full md:w-1/2 lg:w-1/4 px-10 mb-10 text-center">
+                <span>
+                  <svg
+                    className="mx-auto mb-6 text-blue-800 h-8 w-8"
+                    viewBox="0 0 30 31"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M15 0.404449H0.333336V15.2667C0.333336 23.4743 6.90034 30.1289 15 30.1289H29.6667V15.2667C29.6667 7.05901 23.0997 0.404449 15 0.404449ZM27.2221 27.6517H15C8.26104 27.6517 2.7779 22.0955 2.7779 15.2667V2.88161H15C21.739 2.88161 27.2221 8.43822 27.2221 15.2667V27.6517Z" />
+                    <path d="M15 5.3584C9.60011 5.3584 5.22211 9.79477 5.22211 15.2667C5.22211 20.7386 9.60011 25.1749 15 25.1749C20.3999 25.1749 24.7779 20.7386 24.7779 15.2667C24.7779 9.79477 20.3999 5.3584 15 5.3584ZM15 22.6978C10.9491 22.6978 7.66668 19.3705 7.66668 15.2667C7.66668 11.1628 10.9491 7.83556 15 7.83556C19.0498 7.83556 22.3333 11.1628 22.3333 15.2667C22.3333 19.3705 19.0498 22.6978 15 22.6978Z" />
+                    <path d="M15 10.3127C12.3002 10.3127 10.1112 12.5309 10.1112 15.2667C10.1112 18.0024 12.3002 20.2206 15 20.2206C17.6998 20.2206 19.8888 18.0024 19.8888 15.2667C19.8888 12.5309 17.6998 10.3127 15 10.3127ZM15 17.7438C13.6499 17.7438 12.5554 16.6347 12.5554 15.2667C12.5554 13.8986 13.6499 12.7895 15 12.7895C16.3501 12.7895 17.4446 13.8986 17.4446 15.2667C17.4446 16.6347 16.3501 17.7438 15 17.7438Z" />
+                  </svg>
+                </span>
+                <h3 className="mb-4 text-3xl font-bold font-heading text-blue-800">
+                  Продукция
+                </h3>
+                <p className="text-sm text-gray-500">
+                  Поставляемпродукцию во многие крупные предприятия Казахстана.
+                </p>
+              </div>
+              <div className="w-full md:w-1/2 lg:w-1/4 px-10 mb-10 text-center">
+                <span>
+                  <svg
+                    className="mx-auto mb-6 text-blue-800 h-8 w-8"
+                    viewBox="0 0 29 30"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M27.5394 1.16466C25.5171 -0.955363 20.1089 1.11443 14.3336 5.83846C8.55651 1.11443 3.14832 -0.954263 1.12707 1.16466C-0.896976 3.28468 1.07912 8.9492 5.58677 15.0002C1.08017 21.0515 -0.896976 26.7171 1.12707 28.8357C3.14937 30.9553 8.55896 28.8848 14.334 24.1619C20.1089 28.8848 25.5175 30.9553 27.5398 28.8357C29.5638 26.7157 27.5867 21.0501 23.0783 15.0002C27.5877 8.9492 29.5638 3.28358 27.5394 1.16466ZM25.2585 2.77649C25.6862 2.77649 25.8671 2.86962 25.8899 2.89346C26.0075 3.01629 26.3116 4.40336 24.8493 7.59439C24.0562 9.32539 22.9338 11.1818 21.5667 13.062C20.7606 12.0852 19.8951 11.1088 18.9718 10.1419C18.0499 9.17763 17.1175 8.27051 16.1869 7.42646C20.0302 4.36413 23.4077 2.77649 25.2585 2.77649ZM20.0746 14.9994C19.2199 16.0507 18.3036 17.1015 17.3205 18.1314C16.3178 19.1834 15.3171 20.1404 14.3347 21.0145C13.3309 20.1206 12.3281 19.1607 11.3457 18.1314C10.3415 17.0802 9.42696 16.0316 8.59256 15.0031C9.44586 13.9501 10.3611 12.9011 11.3432 11.8715C12.3484 10.8199 13.3487 9.86035 14.3312 8.98623C15.3364 9.88161 16.3395 10.8415 17.3212 11.8704C18.3257 12.9223 19.2406 13.9691 20.0746 14.9994ZM2.66532 3.55454C2.66532 3.10832 2.75422 2.91729 2.77662 2.89346C2.89282 2.77173 4.21722 2.45163 7.26396 3.98463C8.91631 4.81548 10.687 5.99136 12.4832 7.42243C11.5508 8.26758 10.6166 9.17469 9.69366 10.1416C8.77281 11.1074 7.90691 12.0841 7.10261 13.0594C4.18082 9.03133 2.66532 5.49307 2.66532 3.55454ZM3.40802 27.2242C2.98067 27.2242 2.79867 27.13 2.77662 27.1076C2.65937 26.9844 2.35487 25.5974 3.81822 22.4063C4.61132 20.6757 5.73272 18.8193 7.09981 16.9391C7.90656 17.9155 8.77246 18.8934 9.69541 19.8602C10.6163 20.8264 11.5483 21.732 12.4807 22.5761C8.63596 25.6366 5.25847 27.2242 3.40802 27.2242ZM26.0015 26.4458C26.0015 26.8928 25.9116 27.0834 25.8899 27.1062C25.7726 27.2294 24.4486 27.5491 21.4025 26.0161C19.7516 25.1852 17.9796 24.0094 16.1848 22.5772C17.1158 21.7328 18.0492 20.826 18.9707 19.8599C19.893 18.8941 20.7585 17.9177 21.5646 16.9413C24.486 20.969 26.0015 24.5058 26.0015 26.4458Z" />
+                  </svg>
+                </span>
+                <h3 className="mb-4 text-3xl font-bold font-heading text-blue-800">
+                  Мощность
+                </h3>
+                <p className="text-sm text-gray-500">
+                  Мощности позволяют обеспечивать помол пшеницы
+                  производительностью 75 тонн в сутки.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="production" className="relative py-24">
+        <div className="absolute top-0 right-0"></div>
+        <div className="relative container px-4 mx-auto">
+          <h2 className="max-w-md mb-10 text-4xl font-bold font-heading text-blue-800">
+            Наша продукция
+          </h2>
+          <div className="bg-blue-900 mb-2">
+            <div className="flex flex-wrap -mx-4">
+              <div className="relative w-full lg:w-1/2 px-4 order-1 lg:order-0">
+                <div className="hidden lg:block lg:absolute top-0 left-0 ml-20 mt-8"></div>
+                <div className="max-w-md p-6 lg:pl-28 lg:pt-24">
+                  <h3 className="mb-2 font-semibold text-white text-3xl">
+                    Рифленка
+                  </h3>
+                </div>
+              </div>
+              <div className="w-full lg:w-1/2 px-4 order-0 lg:order-1">
+                <img
+                  className="h-72 w-full clip-path-left object-cover"
+                  src="images/riflenka.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div className="bg-blue-900 mb-2">
+            <div className="flex flex-wrap -mx-4">
+              <div className="w-full lg:w-1/2 px-4">
+                <img
+                  className="h-72 w-full clip-path-right object-cover"
+                  src="images/vermsishel.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="relative w-full lg:w-1/2 px-4">
+                <div className="hidden lg:block lg:absolute top-0 right-0 mr-20 mt-8"></div>
+                <div className="max-w-md p-6 lg:pl-28 lg:pt-24">
+                  <h3 className="mb-2 text-lg font-semibold text-white text-3xl">
+                    Вермишель
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-blue-900 mb-2">
+            <div className="flex flex-wrap -mx-4">
+              <div className="relative w-full lg:w-1/2 px-4 order-1 lg:order-0">
+                <div className="hidden lg:block lg:absolute top-0 left-0 ml-20 mt-8"></div>
+                <div className="max-w-md p-6 lg:pl-28 lg:pt-24">
+                  <h3 className="mb-2 text-lg font-semibold text-white text-3xl">
+                    Мини-рожки
+                  </h3>
+                </div>
+              </div>
+              <div className="w-full lg:w-1/2 px-4 order-0 lg:order-1">
+                <img
+                  className="h-72 w-full clip-path-left object-cover"
+                  src="images/rozhki.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div className="bg-blue-900">
+            <div className="flex flex-wrap -mx-4">
+              <div className="w-full lg:w-1/2 px-4">
+                <img
+                  className="h-72 w-full clip-path-right object-cover"
+                  src="images/riflenka.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="relative w-full lg:w-1/2 px-4">
+                <div className="hidden lg:block lg:absolute top-0 right-0 mr-20 mt-8"></div>
+                <div className="max-w-md p-6 lg:pl-28 lg:pt-24">
+                  <h3 className="mb-2 text-lg font-semibold text-white text-3xl">
+                    Спираль
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="products" className="relative overflow-x-hidden pb-24 lg:py-24 mx-auto">
+        <img
+          className="lg:absolute lg:top-0 lg:left-0 h-full w-full lg:w-5/12 mb-12 lg:mb-0 object-cover lg:clip-path-right-top"
+          src="images/muka.jpg"
+          alt=""
         />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+        <div className="absolute inset-0 w-1/2 mx-auto"></div>
+        <div className="relative container px-4 mx-auto">
+          <div className="w-full lg:w-1/2 lg:ml-auto">
+            <div className="max-w-md">
+              <h2 className="mb-8 text-4xl font-bold font-heading text-blue-800">
+                Удобная фасовка продукции
+              </h2>
+              <div className="flex items-start mb-8">
+                <div className="mr-4">
+                  <svg
+                    className="text-blue-500 h-6 w-6"
+                    viewBox="0 0 26 21"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M8.8075 15.5254L23.3675 0.965393L26 3.59789L8.8075 20.8229L0 12.0479L2.665 9.38289L8.8075 15.5254Z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="mb-2 text-lg font-semibold font-heading text-blue-800">
+                    Возможные весовки товара - макаронные изделия
+                  </h3>
+                  <p className="text-base text-gray-500 leading-loose">
+                    400 гр - 1,8 кг - 2 кг - 4,5 кг - 5 кг - 10 кг
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start mb-8">
+                <div className="mr-4">
+                  <svg
+                    className="text-blue-500 h-6 w-6"
+                    viewBox="0 0 26 21"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M8.8075 15.5254L23.3675 0.965393L26 3.59789L8.8075 20.8229L0 12.0479L2.665 9.38289L8.8075 15.5254Z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="mb-2 text-lg font-semibold font-heading text-blue-800">
+                    Возможные весовки товара - мука
+                  </h3>
+                  <p className="text-base text-gray-500 leading-loose">
+                    2 кг - 5 кг - 10 кг - 25 кг - 50 кг
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="gallery" className="py-24 bg-blue-800">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap -m-px">
+            <div className="w-full lg:w-1/2 p-px">
+              <img
+                className="w-full h-72 object-cover"
+                src="images/about-jpg-1684070064376.webp"
+                alt=""
+              />
+            </div>
+            <div className="w-full lg:w-1/2 p-px">
+              <img
+                className="w-full h-72 object-cover"
+                src="images/riflenka.jpg"
+                alt=""
+              />
+            </div>
+            <div className="w-full lg:w-1/3 p-px">
+              <img
+                className="w-full h-72 object-cover"
+                src="images/muka.jpg"
+                alt=""
+              />
+            </div>
+            <div className="w-full lg:w-1/3 p-px">
+              <img
+                className="w-full h-72 object-cover"
+                src="images/vermsishel.jpg"
+                alt=""
+              />
+            </div>
+            <div className="w-full lg:w-1/3 p-px">
+              <img
+                className="w-full h-72 object-cover"
+                src="images/rozhki.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contacts" className="relative py-24 bg-blue-50 overflow-hidden">
+        <div className="absolute top-0 bottom-0 -left-1/4 -right-1/4 flex items-center justify-center"></div>
+        <div className="relative container px-4 mx-auto">
+          <div className="max-w-2xl mx-auto mb-16 text-center">
+            <h2 className="mb-5 text-3xl lg:text-4xl font-bold font-heading text-blue-800">
+              Наши контакты
+            </h2>
+            <p className="text-lg text-gray-500">
+              Наша компания заинтересована в заключении контрактов с
+              дистрибьюторскими компаниями во всех Регионах Казахстана.
+            </p>
+          </div>
+          <div className="flex flex-wrap -mx-4 justify-center">
+            <div className="w-full lg:w-1/3 px-4 mb-4 lg:mb-0">
+              <div className="py-16 h-full bg-white text-center">
+                <h3 className="mb-4 text-lg font-semibold font-heading text-blue-800">
+                  Региональный менеджер
+                </h3>
+                <p className="text-gray-500 font-semibold">Куюков Ермек</p>
+                <p className="text-gray-500">+7 (775)-176-14-24</p>
+                <p className="text-gray-500">erser767@mail.ru</p>
+              </div>
+            </div>
+            <div className="w-full lg:w-1/3 px-4 mb-4 lg:mb-0">
+              <div className="py-16 h-full bg-white text-center">
+                <h3 className="mb-4 text-lg font-semibold font-heading text-blue-800">
+                  Коммерческий директор
+                </h3>
+                <p className="text-gray-500 font-semibold">Бимурзина Алия</p>
+                <p className="text-gray-500">+7 (771) 051-01-09</p>
+                <p className="text-gray-500">aliya.shah@bk.ru</p>
+              </div>
+            </div>
+            <div className="w-full lg:w-1/3 px-4 mb-4 lg:mb-0">
+              <div className="py-16 h-full bg-white text-center">
+                <h3 className="mb-4 text-lg font-semibold font-heading text-blue-800">
+                  Наш адрес
+                </h3>
+                <p className="text-gray-500 font-semibold">
+                  г.Семей, ул.Сорокина 39
+                </p>
+                <p className="text-gray-500">График работы: пн - пт</p>
+                <p className="text-gray-500">09:00 - 18:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
